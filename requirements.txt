@@ -1,6 +1,5 @@
 annotated-types==0.7.0
 anyio==4.8.0
-aptdaemon==2.0.2
 argcomplete==3.5.3
 attrs==25.1.0
 autocommand==2.2.2
