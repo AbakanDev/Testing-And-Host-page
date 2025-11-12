@@ -7,7 +7,7 @@ import google.generativeai as genai
 # Load .env
 load_dotenv()
 
-app = Flask(__name__, static_folder='public')
+app = Flask(__name__, static_folder='docs')
 CORS(app)
 
 # Gemini API
