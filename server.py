@@ -11,6 +11,17 @@ load_dotenv()
 # Khởi tạo Flask App
 # static_folder='public' nói với Flask rằng thư mục 'public' chứa các file tĩnh
 app = Flask(__name__, static_folder='public')
+
+@app.route('/')
+def serve_index():
+    return send_from_directory(app.static_folder, 'index.html')
+
+@app.route('/<path:path>')
+def serve_static(path):
+    return send_from_directory(app.static_folder, path)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
 CORS(app)  # Bật CORS cho tất cả các route
 
 # Cấu hình Gemini API
